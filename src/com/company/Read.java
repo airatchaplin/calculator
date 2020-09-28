@@ -14,7 +14,7 @@ public class Read {
         int countZnak = 0;
 
         for (String c : s.split(regexNum)) {
-            if (c.equals("+")) {
+            if (c.equals("+") || c.equals("-") || c.equals("*") || c.equals("/") || c.equals("^")) {
                 countZnak++;
             } else if (c.equals("")) {
                 continue;
