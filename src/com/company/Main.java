@@ -4,9 +4,17 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        Read r = new Read();
+        Calc calc = new Calc();
+
+
         while (true) {
             System.out.println("Введите выражение: ");
-            System.out.println("Ответ: " + Calc.getAnswer(Calc.ReversePolishNotation(Read.read())));
+            String s = r.handleString(r.read());
+            if (Validator.isValid(s)){
+                System.out.println("Ответ: " + calc.getAnswer(calc.ReversePolishNotation(s)));
+            }
+
         }
     }
 }

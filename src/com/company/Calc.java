@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Calc {
 
-    public static String ReversePolishNotation(String s) {
+    public String ReversePolishNotation(String s) {
         Stack<Character> stack = new Stack<>();
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
@@ -37,7 +37,7 @@ public class Calc {
         return result.toString();
     }
 
-    public static Double getAnswer(String s) {
+    public Double getAnswer(String s) {
         Stack<Double> stack = new Stack<>();
         StringBuilder string = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
